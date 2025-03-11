@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance01 {
+object GenericsVariance01 {
     interface Animal {
         fun pet()
     }

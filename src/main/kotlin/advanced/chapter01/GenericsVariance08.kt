@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance08 {
+object GenericsVariance08 {
     open class Dog
 
     class Puppy : Dog()

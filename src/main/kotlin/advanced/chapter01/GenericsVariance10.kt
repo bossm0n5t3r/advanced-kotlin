@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance10 {
+object GenericsVariance10 {
     open class Car
 
     interface Boat

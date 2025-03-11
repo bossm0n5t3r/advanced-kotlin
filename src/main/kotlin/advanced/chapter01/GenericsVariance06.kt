@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance06 {
+object GenericsVariance06 {
     fun main() {
         val empty: List<Nothing> = emptyList()
         val strs: List<String> = empty

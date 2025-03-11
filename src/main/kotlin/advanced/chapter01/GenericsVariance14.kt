@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance14 {
+object GenericsVariance14 {
     interface Dog
 
     interface Pet

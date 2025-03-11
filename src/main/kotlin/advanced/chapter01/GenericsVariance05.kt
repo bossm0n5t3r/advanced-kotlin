@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance05 {
+object GenericsVariance05 {
     sealed class LinkedList<out T>
 
     data class Node<T>(

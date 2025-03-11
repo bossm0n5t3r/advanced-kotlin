@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance09 {
+object GenericsVariance09 {
     class Box<out T> {
         private var value: T? = null
 

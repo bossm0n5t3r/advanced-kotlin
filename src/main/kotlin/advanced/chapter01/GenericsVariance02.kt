@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance02 {
+object GenericsVariance02 {
     class Consumer<in T> {
         fun <T> consume(value: T): T {
             println("Consuming $value")

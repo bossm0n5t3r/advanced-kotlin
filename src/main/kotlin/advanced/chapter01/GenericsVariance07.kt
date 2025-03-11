@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance07 {
+object GenericsVariance07 {
     sealed class Either<out L, out R>
 
     data class Left<out L>(

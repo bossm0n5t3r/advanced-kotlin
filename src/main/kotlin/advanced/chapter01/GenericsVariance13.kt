@@ -1,6 +1,6 @@
 package me.bossm0n5t3r.advanced.chapter01
 
-object GenericVariance13 {
+object GenericsVariance13 {
     class Box<T>(
         val value: T,
     )
