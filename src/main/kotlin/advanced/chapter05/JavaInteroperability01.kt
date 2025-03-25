@@ -8,9 +8,9 @@ object JavaInteroperability01 {
         ) {}
     }
 
-    // public static final class MessageSender {
-    //    public final void sendMessage(@NotNull String title, @Nullable String content) {
-    //       Intrinsics.checkNotNullParameter(title, "title");
-    //    }
-    // }
+//    public static final class MessageSender {
+//       public final void sendMessage(@NotNull String title, @Nullable String content) {
+//          Intrinsics.checkNotNullParameter(title, "title");
+//       }
+//    }
 }
