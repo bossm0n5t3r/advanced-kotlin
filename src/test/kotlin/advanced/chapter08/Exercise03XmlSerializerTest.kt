@@ -34,7 +34,7 @@ class Exercise03XmlSerializerTest {
     }
 
     @Test
-    fun `library serialization with upper snake case name`() {
+    fun librarySerializationWithUpperSnakeCaseName() {
         @SerializationNameMapper(UpperSnakeCaseName::class)
         @SerializationIgnoreNulls
         class Book(
@@ -87,7 +87,7 @@ class Exercise03XmlSerializerTest {
     }
 
     @Test
-    fun `library serialization with lower case name`() {
+    fun librarySerializationWithLowerCaseName() {
         @SerializationNameMapper(LowerCaseName::class)
         @SerializationIgnoreNulls
         class Book(
@@ -476,7 +476,7 @@ class Exercise03XmlSerializerTest {
     )
 
     @Test
-    fun `should produce correct result for library salmpe`() {
+    fun `should produce correct result for library sample`() {
         val library =
             Library(
                 catalog =
