@@ -18,6 +18,54 @@ class Exercise05MockingTest {
     }
 
     @Test
+    fun mainTest() {
+        val registry = MockRegistry()
+        val userRepository = registry.mock<UserRepository>()
+        val userService = registry.mock<UserService>()
+
+        registry.setReturnValue(
+            { userRepository.getUser("alex") },
+            User("Alex Smith"),
+        )
+        registry.setReturnValue(
+            { userRepository.getUser("bell") },
+            User("Bell Rogers"),
+        )
+        registry.setReturnValue(
+            { userRepository.getUser("dan") },
+            null,
+        )
+        registry.setBody({ userRepository.allUsers() }) {
+            listOf(User("James Bond"), User("Jane Doe"))
+        }
+        registry.setBody({ userService.getUser() }) {
+            User(userRepository.getUser("dan")?.name ?: "Unknown")
+        }
+
+        assertEquals(User("Alex Smith"), userRepository.getUser("alex"))
+        assertEquals(
+            listOf(
+                User("James Bond"),
+                User("Jane Doe"),
+            ),
+            userRepository.allUsers(),
+        )
+        assertEquals(
+            User(name = "Bell Rogers"),
+            userRepository.getUser("bell"),
+        )
+        assertEquals(
+            User("Unknown"),
+            userService.getUser(),
+        )
+        registry.setReturnValue(
+            { userRepository.getUser("dan") },
+            User("Dan Brown"),
+        )
+        assertEquals(User("Dan Brown"), userService.getUser())
+    }
+
+    @Test
     fun `should throw exception when no value set`() {
         val registry = MockRegistry()
         val mock = registry.mock<GetValue>()
